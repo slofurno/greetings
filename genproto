@@ -1,0 +1,1 @@
+protoc -I/usr/include --proto_path=$GOPATH/src:. --twirp_out=$GOPATH/src --go_out=$GOPATH/src ./service/greetingspb/greetings.proto

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+curl -XPOST -H"Content-Type: application/json" localhost:8083/twirp/greetings.Greeter/GetGreeting -d'{}'
+curl -XPOST -H"Content-Type: application/json" localhost:8083/twirp/greetings.Greeter/CreateGreeting -d'{}'
+curl -XPOST -H"Content-Type: application/json" localhost:8083/twirp/greetings.Greeter/ListGreetings -d'{}'
+curl -XPOST -H"Content-Type: application/json" localhost:8083/twirp/greetings.Greeter/CreateGreeting -d'{"greeting": "new greeting!"}'

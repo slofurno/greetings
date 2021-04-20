@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package greetings;
+option go_package = "github.com/slofurno/greetings/service/greetingspb";
+
+message Empty {}
+
+message Greeting {
+  string greeting = 1;
+}
+
+message GreetingList {
+  repeated Greeting greetings = 1;
+}
+
+service Greeter {
+  rpc CreateGreeting(Greeting) returns (Greeting);
+  rpc GetGreeting(Empty) returns (Greeting);
+  rpc ListGreetings(Empty) returns (GreetingList);
+}
